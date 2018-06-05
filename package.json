@@ -1,6 +1,6 @@
 {
   "name": "metascript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Daniel Wirtz <dcode@dcode.io>",
   "description": "Sophisticated meta programming in JavaScript, e.g. to build different versions of a library from a single source tree.",
   "main": "./MetaScript.js",
@@ -25,17 +25,17 @@
   ],
   "dependencies": {
     "ascli": "~0.3",
-    "glob": "~3.2"
+    "glob": "~7.1"
   },
   "devDependencies": {
-    "jsdoc": "~3.3"
+    "jsdoc": "~3.5"
   },
   "license": "Apache-2.0",
   "engines": {
     "node": ">=0.8"
   },
   "scripts": {
-    "prepublish": "npm test",
+    "prepublishOnly": "npm test",
     "test": "node tests/test.js",
     "make": "npm test && npm run-script jsdoc",
     "jsdoc": "node node_modules/jsdoc/jsdoc.js -c jsdoc.json"
